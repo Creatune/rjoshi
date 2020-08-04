@@ -13,25 +13,21 @@
 <style>
     body{
         width: 100%;
-        height: auto;
+        height: 100vh;
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
+        background-size: 1000% 1000%;
         position: relative;
-        animation: changeBackground 10s ease-in-out infinite;
+        animation: changeBackground 10s infinite alternate;
 
     }
 
     @keyframes changeBackground {
         0% {
-            background-position: 0 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
+            background-position: left;
         }
 
         100% {
-            background-position: 0 50%;
+            background-position: right;
         }
     }
 
@@ -41,6 +37,7 @@
 </style>
 
 <body>
+
     <header class="text-gray-700 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
