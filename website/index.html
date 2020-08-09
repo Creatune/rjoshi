@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <title>Rishikesh Joshi</title>
     <script>
-        window.onscroll = function () { stickyNavbar() };
+        window.onscroll = stickyNavbar();
         var navbar = document.getElementById("navbar");
         var sticky = navbar.offsetTop;
         function stickyNavbar() {
@@ -34,7 +34,8 @@
 
         #navbar {
             overflow: hidden;
-            background-color: #fff;
+            background-color: #0000009d;
+            color: #fff;
             -webkit-box-shadow: 0 8px 6px -6px rgb(122, 122, 122);
             -moz-box-shadow: 0 8px 6px -6px rgb(122, 122, 122);
             box-shadow: 0 8px 6px -6px rgb(122, 122, 122)
@@ -79,8 +80,8 @@
 
     <header class="text-gray-700 body-font sticky" id="navbar">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <img alt="hero" src="apple-touch-icon.png" style="border-radius: 360px; width: 40px; height: 40px;">
+            <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
+                <img alt="hero" src="apple-touch-icon.png" style="border-radius: 360px; width: 45px; height: 45px;">
                 <span class="ml-3 text-xl">Rishikesh Joshi</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
