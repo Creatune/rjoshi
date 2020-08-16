@@ -9,17 +9,6 @@
     <link rel="icon" type="image/png" href="apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Rishikesh Joshi</title>
-    <script>
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        function stickyNavbar() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-            } else {
-                navbar.classList.remove("sticky")
-            }
-        }
-    </script>
     <style>
         body {
             width: 100%;
@@ -28,6 +17,7 @@
             background-size: 5000% 5000%;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            will-change: transfer;
             animation: changeBackground 10s alternate infinite;
         }
 
@@ -68,6 +58,10 @@
         footer {
             background-color: #fff;
         }
+
+        .active {
+            display: block;
+        }
     </style>
 </head>
 
@@ -75,17 +69,77 @@
 <body>
 
     <header class="text-gray-700 body-font sticky" id="navbar">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
-                <img alt="hero" src="apple-touch-icon.png" style="border-radius: 360px; width: 45px; height: 45px;">
-                <span class="ml-3 text-xl">Rishikesh Joshi</span>
-            </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a href="#" class="mr-5 hover:text-gray-500">Home</a>
-                <a href="#AboutTitle" class="mr-5 hover:text-gray-500">About</a>
-                <a href="#SkillsTitle" class="mr-5 hover:text-gray-500">Skills</a>
-                <a href="#InterestsTitle" class="mr-5 hover:text-gray-500">Interests</a>
-                <a href="#contact" class="mr-5 hover:text-gray-500">Contact</a>
+
+        <!--<nav class="flex items-center justify-between flex-wrap p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
+                    <img alt="hero" src="apple-touch-icon.png" style="border-radius: 360px; width: 45px; height: 45px;">
+                    <span class="ml-3 text-xl">Rishikesh Joshi</span>
+                </a>
+            </div>
+            <div class="block lg:hidden">
+                <button
+                    class="flex items-center px-3 py-2 border rounded text-white-200 border-white-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4">
+                        Home
+                    </a>
+                    <a href="#AboutTitle"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4">
+                        About
+                    </a>
+                    <a href="#SkillsTitle"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white-500 hover:text-gray-500">
+                        Skills
+                    </a>
+                </div>
+                <div>
+                    <a href="#contact"
+                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Contact</a>
+                </div>
+            </div>
+        </nav>-->
+
+        <div class="container mx-auto p-6 flex-wrap">
+            <nav class="flex-row md:justify-between flex-wrap">
+                <div class="flex flex-row justify-between">
+                    <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
+                        <img alt="hero" src="apple-touch-icon.png"
+                            style="border-radius: 360px; width: 45px; height: 45px;">
+                        <span class="ml-3 text-xl">Rishikesh Joshi</span>
+                    </a>
+
+                    <div class="block lg:hidden">
+                        <button id="hamburgerbtn"
+                            class="flex items-center px-4 py-4 border rounded text-white-200 border-white-400 hover:text-white hover:border-white">
+                            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>Menu</title>
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="">
+                    <ul class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto flex-row"
+                        id="mobileMenu">
+                        <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
+                                href="#">Home</a></li>
+                        <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
+                                href="#AboutTitle">About</a></li>
+                        <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
+                                href="#SkillsTitle">Skills</a></li>
+                        <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
+                                href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -231,6 +285,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        window.onscroll = function () { stickyNavbar() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky")
+            }
+        }
+
+        let hamburger = document.getElementById('hamburgerbtn');
+
+        let mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.onclick = function () { mobileMenu.classList.toggle('active'); }
+    </script>
 </body>
 
 </html>
