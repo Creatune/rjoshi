@@ -89,9 +89,10 @@
         .loader-wrapper {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
+            z-index: 9999;
             background-color: #242f3f;
             display: flex;
             justify-content: center;
@@ -162,11 +163,11 @@
 </head>
 
 <body>
-    <div id="unnecessaryWrapper">
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
-        <div class="loader-wrapper">
-            <span class="loader"><span class="loader-inner"></span></span>
-        </div>
+    <div id="unnecessaryWrapper">
 
         <header class="text-gray-700 body-font sticky" id="navbar">
 
