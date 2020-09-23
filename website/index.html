@@ -9,150 +9,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="src/face.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css">
     <title>Rishikesh Joshi</title>
-    <style>
-        html {
-            min-height: 100%;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            outline: 0;
-            overflow-x: auto;
-            overflow-y: scroll;
-            background: 0 0;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        #unnecessaryWrapper {
-            background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #00ffc3);
-            background-repeat: no-repeat;
-            background-size: 5000% 5000%;
-            background-attachment: fixed;
-            will-change: transfer;
-            animation: changeBackground 10s alternate infinite;
-        }
-
-        #navbar {
-            overflow: hidden;
-            background-color: #0000008f;
-            color: #fff;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-        .sticky+.content {
-            padding-top: 60px;
-        }
-
-        @keyframes changeBackground {
-            0% {
-                background-position: left;
-            }
-
-            50% {
-                background-position: center;
-            }
-
-            100% {
-                background-position: right;
-            }
-        }
-
-        footer {
-            background-color: #fff;
-        }
-
-        .active {
-            display: block;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        .loader-wrapper {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            background-color: #242f3f;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .loader {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            border: 4px solid #Fff;
-            animation: loader 2s infinite ease;
-        }
-
-        .loader-inner {
-            vertical-align: top;
-            display: inline-block;
-            width: 100%;
-            background-color: #fff;
-            animation: loader-inner 2s infinite ease-in;
-        }
-
-        @keyframes loader {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            25% {
-                transform: rotate(180deg);
-            }
-
-            50% {
-                transform: rotate(180deg);
-            }
-
-            75% {
-                transform: rotate(360deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes loader-inner {
-            0% {
-                height: 0%;
-            }
-
-            25% {
-                height: 0%;
-            }
-
-            50% {
-                height: 100%;
-            }
-
-            75% {
-                height: 100%;
-            }
-
-            100% {
-                height: 0%;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -162,55 +21,18 @@
 
     <div id="unnecessaryWrapper">
 
-        <header class="text-gray-700 body-font sticky" id="navbar">
 
-            <!--<nav class="flex items-center justify-between flex-wrap p-6">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
-                    <img alt="hero" src="apple-touch-icon.png" style="border-radius: 360px; width: 45px; height: 45px;">
-                    <span class="ml-3 text-xl">Rishikesh Joshi</span>
-                </a>
-            </div>
-            <div class="block lg:hidden">
-                <button
-                    class="flex items-center px-3 py-2 border rounded text-white-200 border-white-400 hover:text-white hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
-            </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm lg:flex-grow">
-                    <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4">
-                        Home
-                    </a>
-                    <a href="#AboutTitle"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4">
-                        About
-                    </a>
-                    <a href="#SkillsTitle"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white-500 hover:text-gray-500">
-                        Skills
-                    </a>
-                </div>
-                <div>
-                    <a href="#contact"
-                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Contact</a>
-                </div>
-            </div>
-        </nav>-->
+        <header class="text-gray-700 body-font sticky" id="navbar">
 
             <div class="container mx-auto p-6 flex-wrap">
                 <nav class="flex-row md:justify-between flex-wrap">
                     <div class="flex flex-row justify-between">
-                        <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
-                            <img alt="hero" src="src/face.png"
-                                style="border-radius: 360px; width: 45px; height: 45px;">
+                        <a class="flex title-font font-medium items-center text-black mb-4 md:mb-0">
+                            <img alt="hero" src="src/face.png" style="border-radius: 360px; width: 45px; height: 45px;">
                             <span class="ml-3 text-xl">Rishikesh Joshi</span>
                         </a>
                         <div class="block lg:hidden">
-                            <button id="hamburgerbtn"
+                            <button class="neumorphic-shadow-btn p-4" id="hamburgerbtn"
                                 class="flex items-center px-4 py-4 border rounded text-white-200 border-white-400 hover:text-white hover:border-white">
                                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -221,25 +43,27 @@
                         </div>
 
                     </div>
-                    <div class="">
+
+                    <div style="padding-top: 10px;">
                         <ul class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto flex-row"
                             id="mobileMenu">
-                            <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
-                                    href="#">Home</a></li>
-                            <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
-                                    href="#AboutTitle">About</a></li>
-                            <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
-                                    href="#SkillsTitle">Skills</a></li>
-                            <li class="block mt-3 lg:inline-block lg:mt-0 text-white-200 hover:text-gray-500 mr-4"><a
-                                    href="#contact">Contact</a></li>
+                            <li class="block mt-3 lg:inline-block lg:mt-0 text-black mr-4 mb-4">
+                                <a id="homeBtn" class="neumorphic-shadow-btn" href="#">Home</a></li>
+                            <li class="block mt-3 lg:inline-block lg:mt-0 text-black mr-4 mb-4"><a id="aboutBtn"
+                                    class="neumorphic-shadow-btn" href="#AboutTitle">About</a></li>
+                            <li class="block mt-3 lg:inline-block lg:mt-0 text-black mr-4 mb-4"><a id="skillsBtn"
+                                    class="neumorphic-shadow-btn" href="#SkillsTitle">Skills</a></li>
+                            <li class="block mt-3 lg:inline-block lg:mt-0 text-black mr-4 mb-4"><a id="contactBtn"
+                                    class="neumorphic-shadow-btn" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </header>
-        <section class="text-gray-700 body-font content">
+        <section class="text-gray-700 body-font content" style="padding-top: 100px">
             <div class="container mx-auto flex px-5 py-20 items-center justify-center flex-col">
-                <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10" alt="hero" src="src/gciphoto.png" style="border-radius: 20px;">
+                <img class="neumorphic-shadow-image lg:w-2/6 md:w-3/6 w-5/6 mb-10" alt="hero" src="src/gciphoto.png"
+                    style="border-radius: 20px;">
                 <br>
                 <div class="container mx-auto flex flex-col justify-center items-center">
                     <a href="#AboutTitle">
@@ -253,12 +77,14 @@
         <br><br><br>
         <div id="AboutTitle"></div>
         <br>
+        <br>
+        <br>
         <section class="text-black-700 body-font">
             <div class="container px-5 py-24 mx-auto">
-                <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                <div id="aboutText" class="neumorphic-shadow-text p-6 xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
                     <span class="ml-3 text-xl" style="font-size: 40px;"><u>About</u></span>
                     <br><br><br><br>
-                    <p class="leading-relaxed text-lgs">Hi! I am Rishikesh Joshi. I am currently a senior in high
+                    <p class="leading-relaxed text-lgs p-6">Hi! I am Rishikesh Joshi. I am currently a senior in high
                         school,
                         and I love coding. I was first introduced to coding by a contest called Google Code-in which was
                         about
@@ -273,6 +99,7 @@
         </section>
         <div id="SkillsTitle"></div>
         <br>
+        <br>
         <section class="text-black-700 body-font">
             <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col text-center w-full mb-20">
@@ -280,12 +107,12 @@
                 </div>
                 <div class="flex flex-wrap -m-2">
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                        <div class="h-full flex items-center border-black-200 border p-4 rounded-lg">
+                        <div class="h-full flex items-center border p-4 rounded-lg">
                             <img alt="skill"
                                 class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
                                 src="src/androidLogo.png">
                             <div class="flex-grow">
-                                <h2 class="text-gray-1200 title-font font-large"><b>Android</b></h2>
+                                <h2 class="text-gray-900 title-font font-large"><b>Android</b></h2>
                                 <p class="text-gray-dark-500">I enjoy developing apps. I have a few android projects
                                     that I
                                     have been working on over the summer :)</p>
@@ -293,7 +120,7 @@
                         </div>
                     </div>
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                        <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                        <div class="h-full flex items-center p-4 border rounded-lg">
                             <img alt="skill"
                                 class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
                                 src="src/pythonLogo.png">
@@ -357,11 +184,12 @@
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                         <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
                             <img alt="skill"
-                                class="w-16 h-16 bg-black object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                class="w-16 h-16 neumorphic-shadow-image object-cover object-center flex-shrink-0 rounded-full mr-4"
                                 src="src/dartLogo.png">
                             <div class="flex-grow">
                                 <h2 class="text-gray-900 title-font font-medium">Dart</h2>
-                                <p class="text-black-500">I learnt this with the intention to learn flutter... But then I gave up xD. I at least learnt dart ¯\_(ツ)_/¯
+                                <p class="text-black-500">I learnt this with the intention to learn flutter... But then
+                                    I gave up xD. I at least learnt dart ¯\_(ツ)_/¯
                                 </p>
                             </div>
                         </div>
@@ -369,11 +197,12 @@
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                         <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
                             <img alt="skill"
-                                class="w-16 h-16 bg-black object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                class="w-16 h-16 neumorphic-shadow-image object-cover object-center flex-shrink-0 rounded-full mr-4"
                                 src="src/java.png">
                             <div class="flex-grow">
                                 <h2 class="text-gray-900 title-font font-medium">Java</h2>
-                                <p class="text-black-500">I learnt java at school. I use it for nothing other than school (I hate java).
+                                <p class="text-black-500">I learnt java at school. I use it for nothing other than
+                                    school (I hate java).
                                 </p>
                             </div>
                         </div>
@@ -381,11 +210,12 @@
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                         <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
                             <img alt="skill"
-                                class="w-16 h-16 bg-black object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                class="w-16 h-16 neumorphic-shadow-image object-cover object-center flex-shrink-0 rounded-full mr-4"
                                 src="src/rubiksCube.png">
                             <div class="flex-grow">
                                 <h2 class="text-gray-900 title-font font-medium">Speedcuber</h2>
-                                <p class="text-black-500">I started cubing in 4th grade. I attended multiple contests and was the State Champion for 2x2 in the years 2016 and 2017.
+                                <p class="text-black-500">I started cubing in 4th grade. I attended multiple contests
+                                    and was the State Champion for 2x2 in the years 2016 and 2017.
                                     My official best average of 5 solves in 2x2 is 3.60 seconds.
                                 </p>
                             </div>
@@ -396,44 +226,47 @@
         <div id="contact"></div>
         <br>
         <br>
+        <br>
         <section class="text-black-700 body-font">
             <div class="container px-5 py-24 mx-auto">
-                <div class="flex flex-col text-center w-full mb-20">
-                    <span class="ml-3 text-xl" style="font-size: 40px;"><u>Contact</u></span>
-                </div>
-                <div class="flex flex-wrap -m-4 justify-center">
-                    <div class="xl:w-1/4 md:w-1/2 w-screen p-4">
-                        <div class="bg-gray-100 p-6 rounded-lg border-black-700">
-                            <img class="h-40 rounded w-full object-cover object-center mb-6" src="src/githubLogo.png"
-                                alt="contact">
-                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center"><a
-                                    href="https://github.com/Creatune" target="_blank">Visit</a></h3>
-                        </div>
+                <div id="contactText" class="neumorphic-shadow-text p-6">
+                    <div class="flex flex-col text-center w-full mb-20">
+                        <span class="ml-3 text-xl" style="font-size: 40px;"><u>Contact</u></span>
                     </div>
-                    <div class="xl:w-1/4 md:w-1/2 w-screen p-4">
-                        <div class="bg-gray-100 p-6 rounded-lg">
-                            <img class="h-40 rounded w-full object-cover object-center mb-6" src="src/facebookLogo.jpeg"
-                                alt="contact">
-                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center"><a
-                                    href="https://www.facebook.com/profile.php?id=100011425792712"
-                                    target="_blank">Visit</a></h3>
+                    <div class="flex flex-wrap -m-4 justify-center">
+                        <div class="xl:w-1/4 md:w-1/2 w-screen p-4">
+                            <div class="neumorphic-shadow-image bg-gray-100 p-6 rounded-lg border-black-700">
+                                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                                    src="src/githubLogo.png" alt="contact">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center">
+                                    <a href="https://github.com/Creatune" target="_blank">Visit</a></h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="xl:w-1/4 md:w-1/2 w-screen p-4">
-                        <div class="bg-gray-100 p-6 rounded-lg">
-                            <img class="h-40 rounded w-full object-cover object-center mb-6" src="src/instagramLogo.jpeg"
-                                alt="contact">
-                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center"><a
-                                    href="https://www.instagram.com/rjoshi869/?hl=en" target="_blank">Visit</a></h3>
+                        <div class="xl:w-1/4 md:w-1/2 w-screen p-4">
+                            <div class="neumorphic-shadow-image bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                                    src="src/facebookLogo.jpeg" alt="contact">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center">
+                                    <a href="https://www.facebook.com/profile.php?id=100011425792712"
+                                        target="_blank">Visit</a></h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="xl:w-1/4 md:w-1/2 p-4 w-screen">
-                        <div class="bg-gray-100 p-6 rounded-lg">
-                            <img class="h-40 rounded w-full object-cover object-center mb-6" src="src/linkedinLogo.jpeg"
-                                alt="contact">
-                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center"><a
-                                    href="https://www.linkedin.com/in/rishikesh-joshi-46a8961a5/"
-                                    target="_blank">Visit</a></h3>
+                        <div class="xl:w-1/4 md:w-1/2 w-screen p-4">
+                            <div class="neumorphic-shadow-image bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                                    src="src/instagramLogo.jpeg" alt="contact">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center">
+                                    <a href="https://www.instagram.com/rjoshi869/?hl=en" target="_blank">Visit</a></h3>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4 w-screen">
+                            <div class="neumorphic-shadow-image bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                                    src="src/linkedinLogo.jpeg" alt="contact">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font text-center">
+                                    <a href="https://www.linkedin.com/in/rishikesh-joshi-46a8961a5/"
+                                        target="_blank">Visit</a></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -442,35 +275,16 @@
         <footer class="text-gray-700 body-font">
             <div>
                 <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p class="text-black-500 text-sm text-center sm:text-left"><a href="https://github.com/Creatune/rjoshi/blob/master/LICENSE" target="_blank">MIT © 2020 Rishikesh Joshi</a></p>
+                    <p class="text-black-500 text-sm text-center sm:text-left"><a
+                            href="https://github.com/Creatune/rjoshi/blob/master/LICENSE" target="_blank">MIT © 2020
+                            Rishikesh Joshi</a></p>
                     <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                         <a href="https://icons8.com/icon/37223/double-down">Double Down icon by Icons8</a>
                     </span>
                 </div>
             </div>
         </footer>
-        <script>
-            $(window).on("load", function () {
-                $(".loader-wrapper").fadeOut("slow");
-            });
-
-            window.onscroll = function () { stickyNavbar() };
-            var navbar = document.getElementById("navbar");
-            var sticky = navbar.offsetTop;
-            function stickyNavbar() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky");
-                } else {
-                    navbar.classList.remove("sticky")
-                }
-            }
-
-            let hamburger = document.getElementById('hamburgerbtn');
-
-            let mobileMenu = document.getElementById('mobileMenu');
-
-            hamburger.onclick = function () { mobileMenu.classList.toggle('active'); }
-        </script>
+        <script src="script.js"></script>
     </div>
 </body>
 
