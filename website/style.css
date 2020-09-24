@@ -20,6 +20,7 @@ body {
     outline: 0;
     overflow-x: auto;
     overflow-y: scroll;
+    background-attachment: fixed;
     background: 0 0;
     -webkit-overflow-scrolling: touch;
 }
