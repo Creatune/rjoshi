@@ -192,3 +192,8 @@ footer {
     background: var(--back-color);
     border-radius: 20px;
 }
+
+#skillsText {
+    background: var(--back-color);
+    border-radius: 20px;
+}
