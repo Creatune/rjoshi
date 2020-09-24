@@ -5,24 +5,13 @@
 }
 
 * {
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 html {
-    min-height: 100%;
     scroll-behavior: smooth;
-}
-
-body {
-    outline: 0;
-    overflow-x: auto;
-    overflow-y: scroll;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    will-change: transfer;
-    background: 0 0;
-    -webkit-overflow-scrolling: touch;
 }
 
 #unnecessaryWrapper {
