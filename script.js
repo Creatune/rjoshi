@@ -1,10 +1,12 @@
 $(window).on("load", function () {
-    $(".loader-wrapper").fadeOut("slow");
+    $(".loader-wrapper").fadeOut(2000, () => {
+        $(this).remove()
+    });
 });
 
 window.onscroll = function () { stickyNavbar() };
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+let navbar = document.getElementById("navbar");
+let sticky = navbar.offsetTop;
 function stickyNavbar() {
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
