@@ -11,13 +11,17 @@
 }
 
 html {
+    min-height: 100%;
     scroll-behavior: smooth;
+}
+
+body {
+    overflow-y:scroll;
 }
 
 #unnecessaryWrapper {
     justify-content: center;
     background: var(--back-color);
-    background-color: var(--back-color);
     align-items: center;
 }
 
