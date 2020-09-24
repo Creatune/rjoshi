@@ -16,10 +16,18 @@ html {
 }
 
 body {
-    overflow-y:scroll;
+    outline: 0;
+    overflow-x: auto;
+    overflow-y: scroll;
+    background: 0 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 #unnecessaryWrapper {
+    background-repeat: no-repeat;
+    background-size: 5000% 5000%;
+    background-attachment: fixed;
+    will-change: transfer;
     justify-content: center;
     background: var(--back-color);
     align-items: center;
