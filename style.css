@@ -26,7 +26,6 @@ body {
 #unnecessaryWrapper {
     background-color: var(--back-color);
     background-repeat: no-repeat;
-    background-size: 5000% 5000%;
     background-attachment: fixed;
     will-change: transfer;
     justify-content: center;
