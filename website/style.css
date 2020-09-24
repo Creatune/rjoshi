@@ -17,6 +17,7 @@ html {
 #unnecessaryWrapper {
     justify-content: center;
     background: var(--back-color);
+    background-color: var(--back-color);
     align-items: center;
 }
 
