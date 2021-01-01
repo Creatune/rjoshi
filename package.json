@@ -7,7 +7,7 @@
     "deploy": "gh-pages -d website"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rishikesh Joshi",
   "license": "MIT",
   "homepage": "https://Creatune.github.io/rjoshi",
   "dependencies": {
